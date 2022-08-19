@@ -1,0 +1,31 @@
+<%-include('../partials/header')-%>
+<%-include('../partials/navbar')-%>
+        <div class="row">
+            <div class="col-lg-4 m-auto">
+                <div class="card mt-5 bg-dark">
+                  <div class="card-title text-center mt-3">
+                                <img src="/img/addicon1.png" width="150px" height="150px">
+                  </div>
+                  <%-include('../partials/flashMessages')-%>
+                  <div class="card-body">
+                    <form class="form" action="/telephones/Update" method="post">
+                      <div class="input-group mb-3">
+                            <input type="text" name="first_name" id="first_name" value="<%= telephone.first_name%>" class="form-control py-6" placeholder="First Name">
+                       </div> 
+                       <input type="hidden" name="id" id="id" value="<%= telephone.id%>">
+                       <div class="input-group mb-3">
+                            <input type="text" name="last_name" id="last_name" value="<%= telephone.last_name%>" class="form-control py-6" placeholder="Last Name">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" name="telephone" id="telephone" value="<%= telephone.telephone%>" class="form-control py-6" placeholder="telephone">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" name="adress" id="adress"  value="<%= telephone.adress%>" class="form-control py-6" placeholder="Adress">
+                        </div>
+                        <button type="submit"  class="btn btn-success">Update</button>
+                     </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+<%-include('../partials/footer')-%>

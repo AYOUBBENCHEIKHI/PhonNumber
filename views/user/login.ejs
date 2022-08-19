@@ -1,0 +1,25 @@
+<%-include('../partials/header')-%>
+<%-include('../partials/navbar')-%>
+        <div class="row">
+            <div class="col-lg-4 m-auto">
+                <div class="card mt-5 bg-dark">
+                  <div class="card-title text-center mt-3">
+                                <img src="/img/icon.png" width="150px" height="150px">
+                  </div>
+                  <div class="card-body">
+                  <%-include('../partials/flashMessages')-%>
+                    <form class="form" action="/users/login" method="post">
+                      <div class="input-group mb-3">
+                            <input type="text" name="email" id="email" class="form-control py-6" placeholder="User Name">
+                       </div> 
+                       <div class="input-group mb-3">
+                          <input type="password" name="password" id="password" class="form-control py-6" placeholder="User Password">
+                        </div>
+                        <button type="submit" class="btn btn-success">Login Now</button>
+                        <p class="float-right text-white mt-2"><input type="checkbox"> Rememebr Me</p>
+                     </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+<%-include('../partials/footer')-%>

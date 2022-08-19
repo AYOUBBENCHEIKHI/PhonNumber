@@ -1,0 +1,33 @@
+<%-include('../partials/header')-%>
+<%-include('../partials/navbar')-%>
+        <div class="row">
+            <div class="col-lg-4 m-auto">
+                <div class="card mt-5 bg-dark">
+                  <div class="card-title text-center mt-3">
+                                <img src="/img/icon.png" width="150px" height="150px">
+                  </div>
+                  <%-include('../partials/flashMessages')-%>
+                  <div class="card-body">
+                    <form class="form" action="/users/signup" method="post">
+                      <div class="input-group mb-3">
+                            <input type="text" name="first_name" id="first_name" class="form-control py-6" placeholder="First Name">
+                       </div> 
+                       <div class="input-group mb-3">
+                            <input type="text" name="last_name" id="last_name" class="form-control py-6" placeholder="Last Name">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" name="email" id="email" class="form-control py-6" placeholder="Email">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" name="password" id="password" class="form-control py-6" placeholder="Password">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" name="confirm_password" id="confirm_password" class="form-control py-6" placeholder="Confirm_Password">
+                        </div>
+                        <button type="submit"  class="btn btn-success">Regester Now</button>
+                     </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+<%-include('../partials/footer')-%>
